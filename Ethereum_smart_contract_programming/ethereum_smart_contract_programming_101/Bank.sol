@@ -29,7 +29,7 @@ contract Bank is Ownable {
         return balance[msg.sender]; 
     }
     
-    function withdraw(uint amount) public returns (uint) {
+    function withdraw(uint amount) public onlyOwner returns (uint) {
         // msg.sender is an address
         // address payable toSend = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
         // toSend.transfer(amount);
